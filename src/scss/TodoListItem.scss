@@ -1,0 +1,115 @@
+.TodoListItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #f8f9fa;
+  
+      .remove,
+      .update {
+        opacity: 1;
+      }
+    }
+  
+    .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #ced4da;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+  
+      &.checked {
+        border-color: #51cf66;
+        background-color: #51cf66;
+        color: white;
+      }
+  
+      svg {
+        font-size: 20px;
+      }
+    }
+  
+    .content {
+      display: flex;
+      align-items: center;
+      flex: 1;
+  
+      .text {
+        flex: 1;
+      font-size: 16px;
+      color: #495057;
+      text-align: left;
+      word-break: break-word;
+      }
+  
+      input[type="text"] {
+        flex: 1;
+        padding: 5px 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #495057;
+        text-align: left;
+        outline: none;
+  
+        &:focus {
+          border-color: #51cf66;
+        }
+        &.error {
+          border: 1px solid #ff6b6b;
+          box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+        }
+      }
+  
+      .update-confirm,
+      .update-cancel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        color: #51cf66;
+        cursor: pointer;
+  
+        &:hover {
+          color: #37b24d;
+        }
+  
+        svg {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    .update,
+    .remove {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+      color: #adb5bd;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s, color 0.3s;
+  
+      &:hover {
+        color: #ff6b6b;
+      }
+  
+      svg {
+        font-size: 18px;
+      }
+    }
+  }
+  
